@@ -12,6 +12,13 @@ class UsuarioModel extends Model
 	protected $useSoftDeletes       = true;
 	protected $allowedFields        = ['nome','email','telefone'];
 
+
+    /**
+     * @uso Controller usuarios no metodo procurar com o autocomplete
+     * @param string $term
+     * @return array usuarios
+     */
+
     public function procurar($term)
     {
         if ($term === null) {
