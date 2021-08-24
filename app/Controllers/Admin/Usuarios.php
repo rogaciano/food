@@ -30,13 +30,13 @@ class Usuarios extends BaseController
     public function procurar()
     {
 
-
+/*
         echo "<pre>";
         print_r( $this->request->getGet());
         exit;
+*/
 
 
-/*
         if ( !$this->request->isAJAX()) {
             exit('Página não encontrada');
         }
@@ -55,11 +55,12 @@ class Usuarios extends BaseController
         }
 
         return $this->response->setJSON($retorno);
-*/
+
 	}
 
     public function show($id = null)
     {
+
         $usuario = $this->buscaUsuarioOu404($id);
 
         $data = [

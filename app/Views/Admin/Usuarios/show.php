@@ -10,7 +10,6 @@
 
 <!-- aqui enviamos para o template principal os estilos -->
 
-
 <?php echo $this->endSection(); ?>
 
 
