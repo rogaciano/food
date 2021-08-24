@@ -30,13 +30,13 @@ class Usuarios extends BaseController
     public function procurar()
     {
 
-        /*
+
         echo "<pre>";
         print_r( $this->request->getGet());
         exit;
-        */
 
 
+/*
         if ( !$this->request->isAJAX()) {
             exit('Página não encontrada');
         }
@@ -55,22 +55,29 @@ class Usuarios extends BaseController
         }
 
         return $this->response->setJSON($retorno);
-
+*/
 	}
 
     public function show($id = null)
     {
-        $usuario = $this->buscarUsuarioOu404(($id));
+        $usuario = $this->buscaUsuarioOu404($id);
+
+        $data = [
+            'titulo' => "Detalhando o Usuário $usuario->name",
+            'usuario' => $usuario,
+        ];
+
+        return view('Admin/Usuarios/show', $data);
 	}
 
     /**
      * @param int|null $id
-     * @return objeto usuaario
+     * @return object usuario
      */
-	private function buscarUsuarioOu404( int $id = null)
+	private function buscaUsuarioOu404(int $id = null)
     {
-        if( !$id || $usuario = $this->usuarioModel->where("id")->first()) {
-            throw \CodeIgniter\Exceptions\PageNotFoundException("Não encontramos usuáio $id" );
+        if( !$id || !$usuario = $this->usuarioModel->where("id", $id)->first()) {
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound("Não encontramos usuáio $id" );
         }
 
         return $usuario;

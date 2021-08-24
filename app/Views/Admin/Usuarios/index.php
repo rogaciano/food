@@ -79,37 +79,38 @@
 
 <script>
 
+
     $(function() {
 
-        $( "#query" ).autocomplete( {
+        $("#query").autocomplete( {
             source: function(request, response) {
 
-                $.ajax([
+                $.ajax({
 
-                    url : "<php echo site_url('admin/usuarios/procurar'); ?>",
-                    dataType : "json",
-                    data : {
+                    url: "<?php echo site_url('admin/usuarios/procurar'); ?>",
+                    dataType: "json",
+                    data: {
                         term: request.term
                     },
-                    success: function(data) {
+                    success: function (data) {
 
-                      if(data.length < 1) {
+                        if (data.length < 1) {
 
-                          var data = [
-                              {
-                                  label: "Usuario não encontrado",
-                                  value: -1,
-                              }
-                          ];
+                            var data = [
+                                {
+                                    label: "Usuario não encontrado",
+                                    value: -1
+                                }
+                            ];
 
-                      }
-                      response(data); // aqui temos valor no data
+                        }
+                        response(data); // aqui temos valor no data
 
                     },
 
-                ]);  // fim do ajax
+                });  // fim do ajax
 
-            },   // function
+            },   // source
             minLength: 1,
             select: function(event, ui) {
 
@@ -119,9 +120,13 @@
                     return false;
 
                 } else {
-                    window.location.href = '<php echo site_url('admin/usuarios/show/'); ?>' + ui.item.id;
+
+                    window.location.href = '<?php echo site_url('admin/usuarios/show/'); ?>' + ui.item.id;
+
                 }
+
             }
+
         });  // fim autocomplete
 
     });  // fim da função anônima
