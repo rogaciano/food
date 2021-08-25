@@ -48,7 +48,7 @@ class Usuarios extends BaseController
         foreach ($usuarios as $usuario) {
 
             $data['id'] = $usuario->id;
-            $data['value'] = $usuario->nome;
+            $data['value'] = $usuario->name;
 
             $retorno[] = $data;
 
@@ -69,6 +69,7 @@ class Usuarios extends BaseController
         ];
 
         return view('Admin/Usuarios/show', $data);
+
 	}
 
     /**

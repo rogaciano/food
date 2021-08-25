@@ -69,18 +69,19 @@
 
 <!-- aqui enviamos para o template principal os scripts -->
 
+
+
 <?php echo $this->endSection(); ?>
 
 
 
 <?php echo $this->section('scripts'); ?>
 
-<scripts src="<?php echo site_url('admin/vendors/auto-complete/jquery-ui.js') ?>"</script>
+<script src="<?php echo site_url('admin/vendors/auto-complete/jquery-ui.js') ?>"></script>
 
 <script>
 
-
-    $(function() {
+    jQuery(document).ready(function() {
 
         $("#query").autocomplete( {
             source: function(request, response) {

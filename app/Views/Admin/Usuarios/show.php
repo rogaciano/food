@@ -6,7 +6,10 @@
 
 <?php echo $this->endSection(); ?>
 
+
 <?php echo $this->section('estilos'); ?>
+
+
 
 <!-- aqui enviamos para o template principal os estilos -->
 
@@ -23,7 +26,7 @@
             <div class="card-body">
                 <h4 class="card-title"><?= $titulo ?></h4>
 
-                <div class="table-responsive">
+                <p class="card-text"><?php $usuario->name ?></p>
 
                 </div>
             </div>
@@ -31,7 +34,6 @@
     </div>
 
 
-</div>
 
 
 <!-- aqui enviamos para o template principal os scripts -->

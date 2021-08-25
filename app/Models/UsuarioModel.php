@@ -10,7 +10,7 @@ class UsuarioModel extends Model
 	protected $table                = 'usuarios';
 	protected $returnType           = 'object';
 	protected $useSoftDeletes       = true;
-	protected $allowedFields        = ['nome','email','telefone'];
+	protected $allowedFields        = ['name','email','telefone'];
 
 
     /**
@@ -25,8 +25,8 @@ class UsuarioModel extends Model
             return [];
         }
 
-        return $this->select('id', 'nome')
-            ->like('nome', $term)
+        return $this->select('id, name')
+            ->like('name', $term)
             ->get()
             ->getResult();
 	}

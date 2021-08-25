@@ -7,16 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Food Delivery | <?php echo $this->renderSection('titulo'); ?></title>
     <!-- plugins:css -->
-    <link rel="stylesheet" href="<?php site_url("admin/"); ?>vendors/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="<?php site_url("admin/"); ?>vendors/base/vendor.bundle.base.css">
+    <link rel="stylesheet" href="<?php echo base_url("admin/vendors/mdi/css/materialdesignicons.min.css"); ?>">
+    <link rel="stylesheet" href="<?php echo base_url("admin/vendors/base/vendor.bundle.base.css"); ?>">
     <!-- endinject -->
     <!-- plugin css for this page -->
-    <link rel="stylesheet" href="<?php site_url("admin/"); ?>vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+    <link rel="stylesheet" href="<?php echo base_url("admin/vendors/datatables.net-bs4/dataTables.bootstrap4.css"); ?>">
     <!-- End plugin css for this page -->
     <!-- inject:css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url("admin/css/style.css"); ?>">
     <!-- endinject -->
-    <link rel="shortcut icon" href="images/favicon.png"/>
+    <link rel="shortcut icon" href="<?php echo base_url("admin/images/favicon.png"); ?>"/>
 
     <!-- Essa section renderizará os estilos específicos da view que estender esse layout -->
     <?php echo $this->renderSection('estilos'); ?>
@@ -27,8 +27,8 @@
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="navbar-brand-wrapper d-flex justify-content-center">
             <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
-                <a class="navbar-brand brand-logo" href="index.html"><img src="images/logo.svg" alt="logo"/></a>
-                <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg"
+                <a class="navbar-brand brand-logo" href="index.html"><img src="<?php echo base_url("admin/images/logo.svg") ?>" alt="logo"/></a>
+                <a class="navbar-brand brand-logo-mini" href="index.html"><img src="<?php echo base_url("adminimages/logo-mini.svg") ?>"
                                                                                alt="logo"/></a>
                 <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
                     <span class="mdi mdi-sort-variant"></span>
@@ -148,7 +148,7 @@
                 </li>
                 <li class="nav-item nav-profile dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-                        <img src="images/faces/face5.jpg" alt="profile"/>
+                        <img src="<?php echo base_url( "admin/images/faces/face5.jpg") ?>" alt="profile"/>
                         <span class="nav-profile-name">Louis Barnett</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
@@ -273,25 +273,25 @@
 <!-- container-scroller -->
 
 <!-- plugins:js -->
-<script src="<?php site_url("admin/"); ?>vendors/base/vendor.bundle.base.js"></script>
+<script src="<?php echo base_url("adminvendors/base/vendor.bundle.base.js/"); ?>"></script>
 <!-- endinject -->
 <!-- Plugin js for this page-->
-<script src="<?php site_url("admin/"); ?>vendors/chart.js/Chart.min.js"></script>
-<script src="<?php site_url("admin/"); ?>vendors/datatables.net/jquery.dataTables.js"></script>
-<script src="<?php site_url("admin/"); ?>vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+<script src="<?php echo base_url("admin/vendors/chart.js/Chart.min.js"); ?>"></script>
+<script src="<?php echo base_url("admin/vendors/datatables.net/jquery.dataTables.js"); ?>"></script>
+<script src="<?php echo base_url("admin/vendors/datatables.net-bs4/dataTables.bootstrap4.js"); ?>"></script>
 <!-- End plugin js for this page-->
 <!-- inject:js -->
-<script src="<?php site_url("admin/"); ?>js/off-canvas.js"></script>
-<script src="<?php site_url("admin/"); ?>js/hoverable-collapse.js"></script>
-<script src="<?php site_url("admin/"); ?>js/template.js"></script>
+<script src="<?php echo base_url("admin/js/off-canvas.js"); ?>"></script>
+<script src="<?php echo base_url("admin/js/hoverable-collapse.js"); ?>"></script>
+<script src="<?php echo base_url("admin/js/template.js"); ?>"></script>
 <!-- endinject -->
 <!-- Custom js for this page-->
-<script src="<?php site_url("admin/"); ?>js/dashboard.js"></script>
-<script src="<?php site_url("admin/"); ?>js/data-table.js"></script>
-<script src="<?php site_url("admin/"); ?>js/jquery.dataTables.js"></script>
-<script src="<?php site_url("admin/"); ?>js/dataTables.bootstrap4.js"></script>
+<script src="<?php echo base_url("admin/js/dashboard.js"); ?>"></script>
+<script src="<?php echo base_url("admin/js/data-table.js"); ?>"></script>
+<script src="<?php echo base_url("admin/js/jquery.dataTables.js"); ?>"></script>
+<script src="<?php echo base_url("admin/js/dataTables.bootstrap4.js"); ?>"></script>
 <!-- End custom js for this page-->
-<script src="<?php site_url("admin/"); ?>js/jquery.cookie.js" type="text/javascript"></script>
+<script src="<?php echo base_url("admin/js/jquery.cookie.js"); ?>" type="text/javascript"></script>
 
 
 <?php echo $this->renderSection('scripts'); ?>
