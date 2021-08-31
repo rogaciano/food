@@ -83,6 +83,8 @@
 
     jQuery(document).ready(function() {
 
+        console.log('teste');
+
         $("#query").autocomplete( {
             source: function(request, response) {
 
