@@ -32,7 +32,7 @@
 
                 <p class="card-text">
                     <span class="font-weight-bold">Nome:</span>
-                    <?php echo esc( $usuario->name ); ?>
+                    <?php echo esc( $usuario->nome ); ?>
                 </p>
                 <p class="card-text">
                     <span class="font-weight-bold">E-Mail:</span>

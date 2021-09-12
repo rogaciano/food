@@ -3,7 +3,7 @@
 
     <div class="form-group col-md-4">
         <label for="nome">Nome</label>
-        <input type="text" class="form-control" name="nome" id="nome" value="<?php echo esc($usuario->name); ?>">
+        <input type="text" class="form-control" name="nome" id="nome" value="<?php echo esc($usuario->nome); ?>">
     </div>
 
     <div class="form-group col-md-2">
