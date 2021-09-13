@@ -34,7 +34,7 @@ class CriaTabelaUsuarios extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => '20',
                 ],
-            'id_admin' => [
+            'is_admin' => [
                 'type' => 'BOOLEAN',
                 'null' => false,
                 'default' => false,

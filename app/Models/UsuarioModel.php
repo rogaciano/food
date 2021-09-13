@@ -20,12 +20,13 @@ class UsuarioModel extends Model
         'email'                 => 'required|valid_email|is_unique[usuarios.email]',
         'cpf'                   => 'required|is_unique[usuarios.cpf]|exact_length[14]',
         'password'              => 'required|min_length[6]',
+        'telefone'              => 'required',
         'password_confirmation' => 'required_with[password]|matches[password]'
     ];
 
     protected $validationMessages = [
         'nome'        => [
-            'required'  => 'Nome obrigatório.'
+            'required'  => 'O Campo Nome obrigatório.'
         ],
         'email'        => [
             'is_unique' => 'Desculpe. Esse E-Mail já Existe.',
@@ -33,7 +34,7 @@ class UsuarioModel extends Model
         ],
         'cpf'        => [
             'is_unique' => 'Desculpe. Esse CPF já Existe.',
-            'required'  => 'CPF obrigatório.'
+            'required'  => 'O Campo CPF obrigatório.'
         ],
 
 

@@ -44,7 +44,7 @@
                 </p>
                 <p class="card-text">
                     <span class="font-weight-bold">Perfil:</span>
-                    <?php echo $usuario->id_admin ? 'Administrador' : 'Cliente'; ?>
+                    <?php echo $usuario-is_admin> ? 'Administrador' : 'Cliente'; ?>
                 </p>
                 <p class="card-text">
                     <span class="font-weight-bold">Criado:</span>
